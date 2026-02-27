@@ -1,0 +1,113 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Single-page interactive website demonstrating Diffie-Hellman Key Exchange using HTML, CSS, and JavaScript. Features step-by-step visual explanation, input boxes for Alice and Bob's secret keys, public key and shared secret calculation display, and a fancy modern colorful UI with rich background elements and visual decorations.",
+  "architectural_notes": [
+    "Pure HTML/CSS/JavaScript only — no frameworks or build tools",
+    "Single-page application (SPA) layout",
+    "Interactive inputs for Alice and Bob secret keys with live calculation",
+    "Step-by-step visual display of DH algorithm (prime p, generator g, public keys, shared secret)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-build-a-single-page-react-application-that-serves-as-an-interactive-educational-demo-for-the-diffie-hellman-key-exchange-algorithm-structured-as-a-vertical-step-by-step-walkthrough",
+      "title": "Build a single-page React application that serves as an interactive educational demo for the Diffie-Hellman Key Exchange algorithm, structured as a vertical step-by-step walkthrough.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-a-public-parameters-section-at-the-top-where-users-can-view-or-edit-the-shared-prime-p-and-primitive-root-generator-g-values-used-in-the-algorithm-provide-sensible-default-values-e-g-p-23-g-5",
+      "title": "Display a 'Public Parameters' section at the top where users can view or edit the shared prime (p) and primitive root/generator (g) values used in the algorithm. Provide sensible default values (e.g., p=23, g=5).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-input-boxes-for-alice-s-private-key-and-bob-s-private-key-as-the-user-types-immediately-recompute-and-display-each-party-s-public-key-using-the-formula-publickey-g-privatekey-mod-p",
+      "title": "Provide input boxes for Alice's private key and Bob's private key. As the user types, immediately recompute and display each party's public key using the formula: publicKey = g^privateKey mod p.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-show-the-shared-secret-key-calculation-step-displaying-alice-s-computation-s-b-a-mod-p-and-bob-s-computation-s-a-b-mod-p-side-by-side-and-confirm-they-produce-the-same-shared-secret",
+      "title": "Show the shared secret key calculation step, displaying Alice's computation (s = B^a mod p) and Bob's computation (s = A^b mod p) side by side, and confirm they produce the same shared secret.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-render-each-algorithm-step-as-a-visually-distinct-numbered-card-showing-the-step-title-a-plain-english-explanation-of-what-is-happening-the-mathematical-formula-and-the-computed-result-steps-should-flow-top-to-bottom-in-order-1-agree-on-public-parameters-2-alice-chooses-private-key-and-computes-public-key-3-bob-chooses-private-key-and-computes-public-key-4-exchange-public-keys-5-compute-shared-secret",
+      "title": "Render each algorithm step as a visually distinct numbered card showing: the step title, a plain-English explanation of what is happening, the mathematical formula, and the computed result. Steps should flow top to bottom in order: (1) Agree on public parameters, (2) Alice chooses private key and computes public key, (3) Bob chooses private key and computes public key, (4) Exchange public keys, (5) Compute shared secret.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-professional-modern-visual-theme-using-a-dark-navy-charcoal-background-with-teal-cyan-and-amber-accent-colors-use-card-components-with-subtle-gradients-or-borders-clean-sans-serif-typography-and-color-coded-sections-for-alice-one-accent-color-and-bob-another-accent-color-throughout-the-page",
+      "title": "Apply a professional, modern visual theme using a dark navy/charcoal background with teal/cyan and amber accent colors. Use card components with subtle gradients or borders, clean sans-serif typography, and color-coded sections for Alice (one accent color) and Bob (another accent color) throughout the page.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-reset-to-defaults-button-that-restores-all-input-fields-p-g-alice-s-private-key-bob-s-private-key-to-their-default-example-values-and-recalculates-all-results",
+      "title": "Add a 'Reset to Defaults' button that restores all input fields (p, g, Alice's private key, Bob's private key) to their default example values and recalculates all results.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-page-header-with-the-title-diffie-hellman-key-exchange-a-subtitle-explaining-it-is-a-cryptographic-key-agreement-protocol-and-a-brief-introductory-paragraph-summarizing-how-the-algorithm-works-suitable-for-a-college-presentation-context",
+      "title": "Add a page header with the title 'Diffie-Hellman Key Exchange', a subtitle explaining it is a cryptographic key agreement protocol, and a brief introductory paragraph summarizing how the algorithm works, suitable for a college presentation context.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-an-animated-visualization-component-that-illustrates-the-diffie-hellman-key-exchange-flow-between-alice-and-bob-the-animation-should-show-1-alice-and-bob-avatars-nodes-on-opposite-sides-2-animated-arrows-or-particles-traveling-across-a-public-channel-representing-the-exchange-of-public-keys-a-and-b-3-each-party-computing-their-shared-secret-locally-shown-as-a-lock-or-merge-animation-and-4-a-final-state-confirming-both-sides-have-arrived-at-the-same-shared-secret-the-animation-should-use-the-actual-computed-values-from-the-current-state-p-g-private-keys-public-keys-shared-secret-and-re-trigger-when-values-change-style-it-consistently-with-the-existing-dark-navy-charcoal-background-teal-accent-for-alice-and-amber-accent-for-bob",
+      "title": "Create an animated visualization component that illustrates the Diffie-Hellman key exchange flow between Alice and Bob. The animation should show: (1) Alice and Bob avatars/nodes on opposite sides, (2) animated arrows or particles traveling across a 'public channel' representing the exchange of public keys (A and B), (3) each party computing their shared secret locally (shown as a lock or merge animation), and (4) a final state confirming both sides have arrived at the same shared secret. The animation should use the actual computed values from the current state (p, g, private keys, public keys, shared secret) and re-trigger when values change. Style it consistently with the existing dark navy/charcoal background, teal accent for Alice, and amber accent for Bob.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-page-background-with-visually-rich-fancy-and-modern-decorative-elements-add-animated-floating-particles-or-orbs-with-teal-cyan-amber-and-purple-hues-drifting-slowly-across-the-background-incorporate-layered-radial-gradients-and-subtle-geometric-mesh-or-grid-patterns-behind-the-main-content-add-glowing-blurred-blob-shapes-css-radial-gradient-ellipses-with-opacity-anchored-at-different-corners-and-mid-points-of-the-page-to-create-depth-and-color-the-background-should-feel-dynamic-modern-and-vibrant-while-keeping-all-foreground-text-and-cards-fully-readable",
+      "title": "Enhance the page background with visually rich, fancy, and modern decorative elements. Add animated floating particles or orbs with teal, cyan, amber, and purple hues drifting slowly across the background. Incorporate layered radial gradients and subtle geometric mesh or grid patterns behind the main content. Add glowing blurred blob shapes (CSS radial-gradient ellipses with opacity) anchored at different corners and mid-points of the page to create depth and color. The background should feel dynamic, modern, and vibrant while keeping all foreground text and cards fully readable.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add animated visualization showing the key exchange flow between Alice and Bob",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Enhance background with interesting, fancy, modern colorful UI elements — add decorative visuals, gradients, patterns, or animated particles to make the background visually rich and engaging",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Diffie-Hellman Key Exchange Demo",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

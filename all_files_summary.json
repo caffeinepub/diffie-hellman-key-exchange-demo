@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as the backend entry point with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report linking the background decoration enhancement feature to its implementation files, components, and test IDs with high confidence.",
+  "frontend-file-summaries.txt": "JSON document containing one-sentence summaries of each frontend source file, describing their roles in the Diffie-Hellman demo app.",
+  "frontend/index.css": "Global CSS file defining Tailwind directives and CSS custom properties for light and dark theme design tokens (colors, radius, chart, sidebar variables).",
+  "frontend/index.html": "HTML entry point for the Diffie-Hellman Key Exchange Demo app, mounting the React app into a root div and loading the main TSX module.",
+  "frontend/src/App.tsx": "Main React app component managing shared DH parameter state, computing public keys and shared secrets, and composing all UI components with BackgroundDecorations as a fixed background layer.",
+  "frontend/src/components/AnimatedKeyExchange.tsx": "Animated visualization component that steps through Diffie-Hellman key exchange phases (compute, send, derive, complete) with timed transitions and a replay button.",
+  "frontend/src/components/BackgroundDecorations.tsx": "Fixed decorative background component rendering animated morphing blobs, floating particle orbs, a geometric grid overlay, diagonal mesh lines, and a top-edge glow — all pointer-events disabled.",
+  "frontend/src/components/ExchangeDiagram.tsx": "Visual diagram component showing Alice and Bob exchanging public keys over a public channel with bidirectional arrows and an eavesdropper warning note.",
+  "frontend/src/components/Header.tsx": "Renders the hero header for the Diffie-Hellman Key Exchange app, including a banner image, gradient overlays, title, description, and feature pills.",
+  "frontend/src/components/PartyKeyInput.tsx": "Displays a styled input card for either Alice or Bob to enter their private key, with a toggle to show/hide it and a derived public key display.",
+  "frontend/src/components/PublicParameters.tsx": "Renders input fields for the shared public parameters (prime p and generator g) with inline validation feedback for primality and range.",
+  "frontend/src/components/SharedSecretDisplay.tsx": "Shows Alice's and Bob's individual shared-secret computations side by side and confirms whether their results match.",
+  "frontend/src/components/StepCard.tsx": "A reusable card component that displays a numbered protocol step with a title, description, formula block, and optional result or child content, styled by accent color.",
+  "frontend/src/hooks/useActor.ts": "Custom hook that creates and caches an ICP backend actor (anonymous or authenticated) using React Query, and invalidates dependent queries whenever the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication, managing login/logout state, AuthClient creation, and identity persistence across page reloads.",
+  "frontend/src/index.css": "Global stylesheet defining a dark navy/charcoal theme with OKLCH CSS variables, Tailwind base/components/utilities imports, and custom utility classes for Alice (teal) and Bob (amber) color schemes.",
+  "frontend/src/main.tsx": "React app entry point that mounts the root component wrapped with QueryClientProvider and InternetIdentityProvider.",
+  "frontend/src/utils/crypto.ts": "Utility functions for Diffie-Hellman math operations including modular exponentiation, public key computation, shared secret computation, and a simple primality check.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with OKLCH-based color tokens, custom fonts (Inter, JetBrains Mono), border radii, box shadows, and keyframe animations.",
+  "project_state.json": "Project state metadata file tracking version, summary, architectural notes, and implemented features for an interactive Diffie-Hellman Key Exchange educational demo built with React."
+}

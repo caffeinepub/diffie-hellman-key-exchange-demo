@@ -1,0 +1,37 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Enhance background with rich, fancy modern colorful UI elements",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "summary": "Add visually rich, fancy, and modern decorative background elements including animated floating particles, layered radial gradients, glowing blob shapes, and subtle geometric patterns while maintaining content readability",
+      "acceptanceCriteria": [
+        "The page background is no longer a flat dark color — it contains multiple visible decorative elements (gradients, blobs, particles, or patterns).",
+        "At least 3–5 animated floating particle or orb elements are visible drifting slowly across the background using CSS or JS animation.",
+        "Glowing radial gradient blob shapes in teal/cyan and amber/purple appear at corners or edges of the viewport.",
+        "A subtle geometric grid or mesh pattern is layered behind the content for texture.",
+        "All existing step cards, text, inputs, and UI components remain clearly readable above the new background.",
+        "The new background elements are consistent with the existing dark navy/charcoal color scheme and teal/amber accent palette.",
+        "Decorative elements do not interfere with scroll, clicks, or form interactions."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/BackgroundDecorations.tsx",
+          "operation": "create",
+          "description": "Create a new React component that renders all background decorative elements: animated floating particles/orbs (3-5 elements) with teal, cyan, amber, and purple hues using CSS animations for slow drifting motion; glowing radial gradient blob shapes positioned at corners and mid-points using absolute positioning with CSS radial-gradient ellipses and opacity/blur effects; and a subtle geometric grid or mesh pattern overlay. All elements must be positioned with pointer-events: none to avoid interfering with user interactions, use z-index layering below content, and leverage CSS custom properties from the existing OKLCH theme for color consistency."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the new BackgroundDecorations component at the top level of the App component (before the Header), ensuring it is positioned as a fixed or absolute background layer that does not affect the layout of existing content. Wrap it in a container div with appropriate z-index and overflow handling so all decorative elements remain behind the main content stack."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS keyframe animations for the floating particles (e.g., @keyframes float-drift with translateX/translateY and optional rotation), ensuring smooth, slow, perpetual motion. Add utility classes or custom CSS for the geometric grid pattern overlay (using background-image with linear-gradient or repeating-linear-gradient to create mesh lines). Optionally define CSS custom properties for blob colors and sizes to maintain consistency with the existing Alice (teal) and Bob (amber) accent palette. Keep all animations performant by using transform and opacity properties only."
+        }
+      ]
+    }
+  ]
+}

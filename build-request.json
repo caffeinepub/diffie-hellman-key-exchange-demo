@@ -1,0 +1,45 @@
+{
+  "kind": "build_request",
+  "title": "Enhance background with rich, fancy modern colorful UI elements",
+  "projectName": "DH Key Exchange Demo",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-10",
+      "text": "Enhance the page background with visually rich, fancy, and modern decorative elements. Add animated floating particles or orbs with teal, cyan, amber, and purple hues drifting slowly across the background. Incorporate layered radial gradients and subtle geometric mesh or grid patterns behind the main content. Add glowing blurred blob shapes (CSS radial-gradient ellipses with opacity) anchored at different corners and mid-points of the page to create depth and color. The background should feel dynamic, modern, and vibrant while keeping all foreground text and cards fully readable.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-7"
+        ],
+        "quotes": [
+          "the background is so empty make it like with intresting Fancy modern colorful UI"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The page background is no longer a flat dark color — it contains multiple visible decorative elements (gradients, blobs, particles, or patterns).",
+        "At least 3–5 animated floating particle or orb elements are visible drifting slowly across the background using CSS or JS animation.",
+        "Glowing radial gradient blob shapes in teal/cyan and amber/purple appear at corners or edges of the viewport.",
+        "A subtle geometric grid or mesh pattern is layered behind the content for texture.",
+        "All existing step cards, text, inputs, and UI components remain clearly readable above the new background.",
+        "The new background elements are consistent with the existing dark navy/charcoal color scheme and teal/amber accent palette.",
+        "Decorative elements do not interfere with scroll, clicks, or form interactions."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/hooks/ or frontend/src/components/ui.",
+    "Background enhancements must not degrade performance significantly — use CSS animations or lightweight canvas where possible.",
+    "All existing functionality (inputs, calculations, animated key exchange visualization) must continue to work correctly."
+  ],
+  "nonGoals": [
+    "Adding new algorithm steps or educational content.",
+    "Changing the color-coding of Alice (teal) or Bob (amber) accents.",
+    "Modifying backend logic.",
+    "Replacing existing card or component styles — only enhance the background layer."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

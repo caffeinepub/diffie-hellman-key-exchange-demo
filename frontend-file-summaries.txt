@@ -1,0 +1,14 @@
+{
+  "frontend/src/index.css": "Global styles extended with new CSS keyframe animations for particle-float and four blob-drift variants used by BackgroundDecorations, alongside all existing utility classes and design tokens.",
+  "frontend/tailwind.config.js": "Tailwind config extended with four new blob-drift keyframes and a particle-float keyframe, plus their corresponding animation utilities to support the BackgroundDecorations component.",
+  "frontend/src/utils/crypto.ts": "Pure TypeScript utility implementing BigInt-based modular exponentiation (modPow), public key computation (g^privateKey mod p), shared secret derivation, and a primality check helper.",
+  "frontend/src/components/Header.tsx": "Page header with hero banner background, gradient title, tagline, 2–4 sentence algorithm description, and feature pills for Alice/Bob color-coded branding.",
+  "frontend/src/components/PublicParameters.tsx": "Editable card for the shared prime (p) and generator (g) public parameters with live validation feedback and informational callout.",
+  "frontend/src/components/PartyKeyInput.tsx": "Reusable party card (Alice or Bob) with a private key input (show/hide toggle), live public key computation display, and party-specific teal/amber accent styling.",
+  "frontend/src/components/StepCard.tsx": "Numbered step card component with badge, title, description, monospace formula block, result slot, and accent color variants (alice/bob/success/neutral).",
+  "frontend/src/components/SharedSecretDisplay.tsx": "Side-by-side display of Alice's and Bob's shared secret computations with formulas, values, and a highlighted success card confirming both secrets match.",
+  "frontend/src/components/ExchangeDiagram.tsx": "Visual diagram showing Alice and Bob exchanging public keys over a public channel with an eavesdropper warning note.",
+  "frontend/src/App.tsx": "Main single-page app unchanged in functionality; now wraps all content in a relative z-index container and renders the new BackgroundDecorations component as a fixed background layer behind all existing content.",
+  "frontend/src/components/AnimatedKeyExchange.tsx": "New animated visualization component that steps through the Diffie-Hellman key exchange flow phase by phase — showing Alice and Bob computing public keys, sending them over a public channel with travel animations, deriving the shared secret, and confirming a match — with a replay button and progress indicator.",
+  "frontend/src/components/BackgroundDecorations.tsx": "New fixed-position decorative background component rendering 4 animated morphing blob shapes (teal, amber, purple, cyan) with radial gradients and blur, 8 floating particle orbs with staggered drift animations, a geometric grid overlay, diagonal mesh lines, and a colorful top-edge glow line — all with pointer-events disabled."
+}

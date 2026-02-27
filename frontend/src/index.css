@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+
+        /* Dark navy/charcoal theme */
+        --background: 0.14 0.015 255;
+        --foreground: 0.93 0.01 240;
+
+        --card: 0.18 0.018 255;
+        --card-foreground: 0.93 0.01 240;
+
+        --popover: 0.2 0.02 255;
+        --popover-foreground: 0.93 0.01 240;
+
+        --primary: 0.72 0.18 195;
+        --primary-foreground: 0.1 0.01 255;
+
+        --secondary: 0.22 0.02 255;
+        --secondary-foreground: 0.85 0.01 240;
+
+        --muted: 0.22 0.02 255;
+        --muted-foreground: 0.6 0.02 240;
+
+        --accent: 0.72 0.18 195;
+        --accent-foreground: 0.1 0.01 255;
+
+        --destructive: 0.65 0.22 25;
+        --destructive-foreground: 0.98 0 0;
+
+        --border: 0.28 0.025 255;
+        --input: 0.28 0.025 255;
+        --ring: 0.72 0.18 195;
+
+        /* Alice teal */
+        --alice: 0.72 0.18 195;
+        --alice-dim: 0.55 0.14 195;
+        --alice-bg: 0.2 0.04 195;
+
+        /* Bob amber */
+        --bob: 0.78 0.18 65;
+        --bob-dim: 0.62 0.15 65;
+        --bob-bg: 0.2 0.04 65;
+
+        /* Success green */
+        --success: 0.72 0.18 145;
+        --success-bg: 0.18 0.04 145;
+
+        --chart-1: 0.72 0.18 195;
+        --chart-2: 0.78 0.18 65;
+        --chart-3: 0.72 0.18 145;
+        --chart-4: 0.72 0.18 300;
+        --chart-5: 0.72 0.18 25;
+
+        --sidebar: 0.16 0.016 255;
+        --sidebar-foreground: 0.93 0.01 240;
+        --sidebar-primary: 0.72 0.18 195;
+        --sidebar-primary-foreground: 0.1 0.01 255;
+        --sidebar-accent: 0.22 0.02 255;
+        --sidebar-accent-foreground: 0.85 0.01 240;
+        --sidebar-border: 0.28 0.025 255;
+        --sidebar-ring: 0.72 0.18 195;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    code, .font-mono {
+        font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    }
+}
+
+@layer utilities {
+    .text-alice {
+        color: oklch(var(--alice));
+    }
+    .text-alice-dim {
+        color: oklch(var(--alice-dim));
+    }
+    .bg-alice {
+        background-color: oklch(var(--alice));
+    }
+    .bg-alice-bg {
+        background-color: oklch(var(--alice-bg));
+    }
+    .border-alice {
+        border-color: oklch(var(--alice));
+    }
+    .border-alice-dim {
+        border-color: oklch(var(--alice-dim));
+    }
+    .ring-alice {
+        --tw-ring-color: oklch(var(--alice));
+    }
+    .shadow-alice {
+        box-shadow: 0 0 20px oklch(var(--alice) / 0.25);
+    }
+    .glow-alice {
+        box-shadow: 0 0 30px oklch(var(--alice) / 0.3), 0 0 60px oklch(var(--alice) / 0.1);
+    }
+
+    .text-bob {
+        color: oklch(var(--bob));
+    }
+    .text-bob-dim {
+        color: oklch(var(--bob-dim));
+    }
+    .bg-bob {
+        background-color: oklch(var(--bob));
+    }
+    .bg-bob-bg {
+        background-color: oklch(var(--bob-bg));
+    }
+    .border-bob {
+        border-color: oklch(var(--bob));
+    }
+    .border-bob-dim {
+        border-color: oklch(var(--bob-dim));
+    }
+    .ring-bob {
+        --tw-ring-color: oklch(var(--bob));
+    }
+    .shadow-bob {
+        box-shadow: 0 0 20px oklch(var(--bob) / 0.25);
+    }
+    .glow-bob {
+        box-shadow: 0 0 30px oklch(var(--bob) / 0.3), 0 0 60px oklch(var(--bob) / 0.1);
+    }
+
+    .text-success {
+        color: oklch(var(--success));
+    }
+    .bg-success-bg {
+        background-color: oklch(var(--success-bg));
+    }
+    .border-success {
+        border-color: oklch(var(--success));
+    }
+    .glow-success {
+        box-shadow: 0 0 30px oklch(var(--success) / 0.3), 0 0 60px oklch(var(--success) / 0.1);
+    }
+
+    .card-glass {
+        background: oklch(var(--card) / 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+}
+
+/* ─── Background decoration animations ─── */
+
+@keyframes particle-float {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.6;
+    }
+    20% {
+        transform: translate(18px, -22px) scale(1.08);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translate(-12px, -40px) scale(0.95);
+        opacity: 0.7;
+    }
+    60% {
+        transform: translate(25px, -18px) scale(1.05);
+        opacity: 0.85;
+    }
+    80% {
+        transform: translate(-8px, 10px) scale(0.98);
+        opacity: 0.65;
+    }
+    100% {
+        transform: translate(0px, 0px) scale(1);
+        opacity: 0.6;
+    }
+}
+
+@keyframes blob-drift-1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    33% {
+        transform: translate(40px, 30px) scale(1.05) rotate(5deg);
+    }
+    66% {
+        transform: translate(-20px, 50px) scale(0.97) rotate(-3deg);
+    }
+}
+
+@keyframes blob-drift-2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    33% {
+        transform: translate(-50px, -30px) scale(1.04) rotate(-4deg);
+    }
+    66% {
+        transform: translate(30px, -50px) scale(0.96) rotate(6deg);
+    }
+}
+
+@keyframes blob-drift-3 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translate(-35px, 40px) scale(1.06) rotate(-5deg);
+    }
+}
+
+@keyframes blob-drift-4 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+    50% {
+        transform: translate(30px, -35px) scale(1.04) rotate(4deg);
+    }
+}
+
+.particle-float {
+    animation: particle-float linear infinite;
+}
+
+.blob-drift-1 {
+    animation: blob-drift-1 28s ease-in-out infinite;
+}
+
+.blob-drift-2 {
+    animation: blob-drift-2 32s ease-in-out infinite;
+}
+
+.blob-drift-3 {
+    animation: blob-drift-3 24s ease-in-out infinite;
+}
+
+.blob-drift-4 {
+    animation: blob-drift-4 20s ease-in-out infinite;
+}
+
+/* ─── Existing keyframe animations ─── */
+
+@keyframes travel-right {
+    0% { opacity: 0; transform: translateX(-40px); }
+    15% { opacity: 1; transform: translateX(-20px); }
+    85% { opacity: 1; transform: translateX(20px); }
+    100% { opacity: 0; transform: translateX(40px); }
+}
+
+@keyframes travel-left {
+    0% { opacity: 0; transform: translateX(40px); }
+    15% { opacity: 1; transform: translateX(20px); }
+    85% { opacity: 1; transform: translateX(-20px); }
+    100% { opacity: 0; transform: translateX(-40px); }
+}
+
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.7); }
+    60% { opacity: 1; transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
